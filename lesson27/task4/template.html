@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <title> {{ title }} </title>
+    </head>
+    <body>
+        {% if user %}
+            <h1>Welcome, {{ user }}</h1>
+        {% else %}
+            <h1>Welcome, guest</h1>
+        {% endif %}
+        
+        <ul>
+            {% for user in users %}
+                <li> Name: {{ user.name }}, email: {{ user.mail }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
